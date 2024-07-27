@@ -1,0 +1,27 @@
+Dump of assembler code for function phase_2:
+   0x0000000000400f10 <+0>:     push   %rbp
+   0x0000000000400f11 <+1>:     push   %rbx
+   0x0000000000400f12 <+2>:     sub    $0x28,%rsp
+   0x0000000000400f16 <+6>:     mov    %rsp,%rsi
+   0x0000000000400f19 <+9>:     callq  0x401581 <read_six_numbers>
+   0x0000000000400f1e <+14>:    cmpl   $0x1,(%rsp)
+   0x0000000000400f22 <+18>:    jne    0x400f2d <phase_2+29>
+   0x0000000000400f24 <+20>:    mov    %rsp,%rbx
+   0x0000000000400f27 <+23>:    lea    0x14(%rbx),%rbp
+   0x0000000000400f2b <+27>:    jmp    0x400f42 <phase_2+50>
+   0x0000000000400f2d <+29>:    callq  0x40154b <explode_bomb>
+   0x0000000000400f32 <+34>:    jmp    0x400f24 <phase_2+20>
+   0x0000000000400f34 <+36>:    callq  0x40154b <explode_bomb>
+   0x0000000000400f39 <+41>:    add    $0x4,%rbx
+   0x0000000000400f3d <+45>:    cmp    %rbp,%rbx
+   0x0000000000400f40 <+48>:    je     0x400f4d <phase_2+61>
+   0x0000000000400f42 <+50>:    mov    (%rbx),%eax
+   0x0000000000400f44 <+52>:    add    %eax,%eax
+   0x0000000000400f46 <+54>:    cmp    %eax,0x4(%rbx)
+   0x0000000000400f49 <+57>:    je     0x400f39 <phase_2+41>
+   0x0000000000400f4b <+59>:    jmp    0x400f34 <phase_2+36>
+   0x0000000000400f4d <+61>:    add    $0x28,%rsp
+   0x0000000000400f51 <+65>:    pop    %rbx
+   0x0000000000400f52 <+66>:    pop    %rbp
+   0x0000000000400f53 <+67>:    retq
+End of assembler dump.
