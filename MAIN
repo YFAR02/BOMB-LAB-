@@ -1,0 +1,74 @@
+(gdb) disas main
+Dump of assembler code for function main:
+   0x0000000000400db6 <+0>:     push   %rbx
+   0x0000000000400db7 <+1>:     cmp    $0x1,%edi
+   0x0000000000400dba <+4>:     je     0x400ea8 <main+242>
+   0x0000000000400dc0 <+10>:    mov    %rsi,%rbx
+   0x0000000000400dc3 <+13>:    cmp    $0x2,%edi
+   0x0000000000400dc6 <+16>:    jne    0x400ed6 <main+288>
+   0x0000000000400dcc <+22>:    mov    0x8(%rsi),%rdi
+   0x0000000000400dd0 <+26>:    mov    $0x402330,%esi
+   0x0000000000400dd5 <+31>:    callq  0x400c50 <fopen@plt>
+   0x0000000000400dda <+36>:    mov    %rax,0x2039cf(%rip)        # 0x6047b0 <infile>
+   0x0000000000400de1 <+43>:    test   %rax,%rax
+   0x0000000000400de4 <+46>:    je     0x400ebb <main+261>
+   0x0000000000400dea <+52>:    callq  0x40138c <initialize_bomb>
+   0x0000000000400def <+57>:    mov    $0x4023b8,%edi
+   0x0000000000400df4 <+62>:    callq  0x400b70 <puts@plt>
+   0x0000000000400df9 <+67>:    mov    $0x4023f8,%edi
+   0x0000000000400dfe <+72>:    callq  0x400b70 <puts@plt>
+   0x0000000000400e03 <+77>:    callq  0x4015c0 <read_line>
+   0x0000000000400e08 <+82>:    mov    %rax,%rdi
+   0x0000000000400e0b <+85>:    callq  0x400ef2 <phase_1>
+   0x0000000000400e10 <+90>:    callq  0x4016ee <phase_defused>
+   0x0000000000400e15 <+95>:    mov    $0x402428,%edi
+   0x0000000000400e1a <+100>:   callq  0x400b70 <puts@plt>
+   0x0000000000400e1f <+105>:   callq  0x4015c0 <read_line>
+   0x0000000000400e24 <+110>:   mov    %rax,%rdi
+   0x0000000000400e27 <+113>:   callq  0x400f10 <phase_2>
+   0x0000000000400e2c <+118>:   callq  0x4016ee <phase_defused>
+   0x0000000000400e31 <+123>:   mov    $0x402369,%edi
+   0x0000000000400e36 <+128>:   callq  0x400b70 <puts@plt>
+   0x0000000000400e3b <+133>:   callq  0x4015c0 <read_line>
+   0x0000000000400e40 <+138>:   mov    %rax,%rdi
+   0x0000000000400e43 <+141>:   callq  0x400f54 <phase_3>
+   0x0000000000400e48 <+146>:   callq  0x4016ee <phase_defused>
+--Type <RET> for more, q to quit, c to continue without paging--
+   0x0000000000400e4d <+151>:   mov    $0x402387,%edi
+   0x0000000000400e52 <+156>:   callq  0x400b70 <puts@plt>
+   0x0000000000400e57 <+161>:   callq  0x4015c0 <read_line>
+   0x0000000000400e5c <+166>:   mov    %rax,%rdi
+   0x0000000000400e5f <+169>:   callq  0x40101b <phase_4>
+   0x0000000000400e64 <+174>:   callq  0x4016ee <phase_defused>
+   0x0000000000400e69 <+179>:   mov    $0x402458,%edi
+   0x0000000000400e6e <+184>:   callq  0x400b70 <puts@plt>
+   0x0000000000400e73 <+189>:   callq  0x4015c0 <read_line>
+   0x0000000000400e78 <+194>:   mov    %rax,%rdi
+   0x0000000000400e7b <+197>:   callq  0x40106e <phase_5>
+   0x0000000000400e80 <+202>:   callq  0x4016ee <phase_defused>
+   0x0000000000400e85 <+207>:   mov    $0x402396,%edi
+   0x0000000000400e8a <+212>:   callq  0x400b70 <puts@plt>
+   0x0000000000400e8f <+217>:   callq  0x4015c0 <read_line>
+   0x0000000000400e94 <+222>:   mov    %rax,%rdi
+   0x0000000000400e97 <+225>:   callq  0x4010e1 <phase_6>
+   0x0000000000400e9c <+230>:   callq  0x4016ee <phase_defused>
+   0x0000000000400ea1 <+235>:   mov    $0x0,%eax
+   0x0000000000400ea6 <+240>:   pop    %rbx
+   0x0000000000400ea7 <+241>:   retq
+   0x0000000000400ea8 <+242>:   mov    0x2038e1(%rip),%rax        # 0x604790 <stdin@@GLIBC_2.2.5>
+   0x0000000000400eaf <+249>:   mov    %rax,0x2038fa(%rip)        # 0x6047b0 <infile>
+   0x0000000000400eb6 <+256>:   jmpq   0x400dea <main+52>
+   0x0000000000400ebb <+261>:   mov    0x8(%rbx),%rdx
+   0x0000000000400ebf <+265>:   mov    (%rbx),%rsi
+   0x0000000000400ec2 <+268>:   mov    $0x402332,%edi
+   0x0000000000400ec7 <+273>:   callq  0x400b90 <printf@plt>
+   0x0000000000400ecc <+278>:   mov    $0x8,%edi
+   0x0000000000400ed1 <+283>:   callq  0x400c80 <exit@plt>
+   0x0000000000400ed6 <+288>:   mov    (%rsi),%rsi
+   0x0000000000400ed9 <+291>:   mov    $0x40234f,%edi
+   0x0000000000400ede <+296>:   mov    $0x0,%eax
+   0x0000000000400ee3 <+301>:   callq  0x400b90 <printf@plt>
+--Type <RET> for more, q to quit, c to continue without paging--
+   0x0000000000400ee8 <+306>:   mov    $0x8,%edi
+   0x0000000000400eed <+311>:   callq  0x400c80 <exit@plt>
+End of assembler dump.
