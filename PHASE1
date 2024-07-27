@@ -1,0 +1,11 @@
+Dump of assembler code for function phase_1:
+   0x0000000000400ef2 <+0>:     sub    $0x8,%rsp
+   0x0000000000400ef6 <+4>:     mov    $0x402480,%esi
+   0x0000000000400efb <+9>:     callq  0x401324 <strings_not_equal>
+   0x0000000000400f00 <+14>:    test   %eax,%eax
+   0x0000000000400f02 <+16>:    jne    0x400f09 <phase_1+23>
+   0x0000000000400f04 <+18>:    add    $0x8,%rsp
+   0x0000000000400f08 <+22>:    retq
+   0x0000000000400f09 <+23>:    callq  0x40154b <explode_bomb>
+   0x0000000000400f0e <+28>:    jmp    0x400f04 <phase_1+18>
+End of assembler dump.
