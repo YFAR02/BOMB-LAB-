@@ -1,0 +1,41 @@
+Dump of assembler code for function phase_3:
+   0x0000000000400f54 <+0>:     sub    $0x18,%rsp
+   0x0000000000400f58 <+4>:     lea    0x8(%rsp),%rcx
+   0x0000000000400f5d <+9>:     lea    0xc(%rsp),%rdx
+   0x0000000000400f62 <+14>:    mov    $0x402785,%esi
+   0x0000000000400f67 <+19>:    mov    $0x0,%eax
+   0x0000000000400f6c <+24>:    callq  0x400c30 <__isoc99_sscanf@plt>
+   0x0000000000400f71 <+29>:    cmp    $0x1,%eax
+   0x0000000000400f74 <+32>:    jle    0x400f88 <phase_3+52>
+   0x0000000000400f76 <+34>:    cmpl   $0x7,0xc(%rsp)
+   0x0000000000400f7b <+39>:    ja     0x400fc0 <phase_3+108>
+   0x0000000000400f7d <+41>:    mov    0xc(%rsp),%eax
+   0x0000000000400f81 <+45>:    jmpq   *0x4024e0(,%rax,8)
+   0x0000000000400f88 <+52>:    callq  0x40154b <explode_bomb>
+   0x0000000000400f8d <+57>:    jmp    0x400f76 <phase_3+34>
+   0x0000000000400f8f <+59>:    mov    $0x137,%eax
+   0x0000000000400f94 <+64>:    jmp    0x400fd1 <phase_3+125>
+   0x0000000000400f96 <+66>:    mov    $0x15b,%eax
+   0x0000000000400f9b <+71>:    jmp    0x400fd1 <phase_3+125>
+   0x0000000000400f9d <+73>:    mov    $0x56,%eax
+   0x0000000000400fa2 <+78>:    jmp    0x400fd1 <phase_3+125>
+   0x0000000000400fa4 <+80>:    mov    $0x242,%eax
+   0x0000000000400fa9 <+85>:    jmp    0x400fd1 <phase_3+125>
+   0x0000000000400fab <+87>:    mov    $0x388,%eax
+   0x0000000000400fb0 <+92>:    jmp    0x400fd1 <phase_3+125>
+   0x0000000000400fb2 <+94>:    mov    $0x265,%eax
+   0x0000000000400fb7 <+99>:    jmp    0x400fd1 <phase_3+125>
+   0x0000000000400fb9 <+101>:   mov    $0x6d,%eax
+   0x0000000000400fbe <+106>:   jmp    0x400fd1 <phase_3+125>
+   0x0000000000400fc0 <+108>:   callq  0x40154b <explode_bomb>
+   0x0000000000400fc5 <+113>:   mov    $0x0,%eax
+   0x0000000000400fca <+118>:   jmp    0x400fd1 <phase_3+125>
+   0x0000000000400fcc <+120>:   mov    $0x129,%eax
+   0x0000000000400fd1 <+125>:   cmp    %eax,0x8(%rsp)
+--Type <RET> for more, q to quit, c to continue without paging--
+   0x0000000000400fd5 <+129>:   jne    0x400fdc <phase_3+136>
+   0x0000000000400fd7 <+131>:   add    $0x18,%rsp
+   0x0000000000400fdb <+135>:   retq
+   0x0000000000400fdc <+136>:   callq  0x40154b <explode_bomb>
+   0x0000000000400fe1 <+141>:   jmp    0x400fd7 <phase_3+131>
+End of assembler dump.
